@@ -3,12 +3,12 @@
 //
 
 #include "hashmap/hashmap-test.h"
-#include "leetcode/Solutions.h"
+#include "leetcode/LeetCodes.h"
 
 int main() {
     // 哈希表
     // hashmap_test::test();
     // LeetCode
-    Solutions().run();
+    LeetCodes().run();
     return 0;
 }

@@ -1,9 +1,9 @@
 //
 // Created by sanenchen on 25-7-4.
 //
-#include "Solutions.h"
+#include "LeetCodes.h"
 // T1 两数之和
-vector<int> Solutions::twoSum(vector<int> &nums, int target) {
+vector<int> LeetCodes::twoSum(vector<int> &nums, int target) {
     vector<int> ans = {};
     // 键值对 HashMap
     unordered_map<int, int> map;

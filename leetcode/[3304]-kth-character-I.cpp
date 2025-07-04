@@ -1,11 +1,11 @@
-#include "Solutions.h"
+#include "LeetCodes.h"
 //
 // Created by sanenchen on 25-7-4.
 //
 
 
 
-char Solutions::kthCharacterI(int k) {
+char LeetCodes::kthCharacterI(int k) {
     string word = "a";
 
     // 计算应该循环的次数
