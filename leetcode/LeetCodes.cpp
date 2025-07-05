@@ -27,8 +27,11 @@ void LeetCodes::run() {
     // cout << kthCharacterII(10, operations) << endl;
 
     // T394 找幸运数 哈希表 set
-    vector<int> arr = {1,2,2,3,3,3};
-    cout << findLucky(arr) << endl;
+    // vector<int> arr = {1,2,2,3,3,3};
+    // cout << findLucky(arr) << endl;
+
+    // T50 快速幂
+    // cout << myPow(2,999) << endl;
 
 }
 
