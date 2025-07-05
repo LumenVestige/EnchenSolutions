@@ -15,16 +15,21 @@ void LeetCodes::run() {
     // }
 
     // 456周赛 T1
-    for (auto &item: partitionString("xm")) {
-        cout << item << " ";
-    }
+    // for (auto &item: partitionString("xm")) {
+    //     cout << item << " ";
+    // }
 
     // T3304 找出第 K 个字符 I
     // cout << kthCharacterI(500) << endl;
 
     // T3307 找出第 K 个字符 II
-    // vector<int> operations = {0,1,0,1,1,0,1,0,1,1,0,0,0,0,0,1,0,1,1,0,1,1,0,0,1};
-    // cout << kthCharacterII(23980478, operations) << endl;
+    // vector<int> operations = {0,1,0,1};
+    // cout << kthCharacterII(10, operations) << endl;
+
+    // T394 找幸运数 哈希表 set
+    vector<int> arr = {1,2,2,3,3,3};
+    cout << findLucky(arr) << endl;
+
 }
 
 

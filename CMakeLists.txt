@@ -12,4 +12,6 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         leetcode/[1]-two-sum.cpp
         leetcode/[3304]-kth-character-I.cpp
         leetcode/[3307]-kth-character-II.cpp
+        leetcode/[50]-my-pow.cpp
+        leetcode/[1394]-find-lucky.cpp
 )

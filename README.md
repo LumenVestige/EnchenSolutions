@@ -12,7 +12,7 @@ a += 'c';
 可以使用
 ```C++
 stringstream temp;
-temp.str("abc");
+temp << "abc";
 temp.put('a');
 temp.str(); // 取出为string类型
 ```

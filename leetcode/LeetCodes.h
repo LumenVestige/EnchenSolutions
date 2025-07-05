@@ -17,6 +17,8 @@ private:
     static vector<string> partitionString(string s);
     static char kthCharacterI(int k);
     static char kthCharacterII(long long k, vector<int>& operations);
+    static double myPow(double x, int n);
+    static int findLucky(vector<int>& arr);
 };
 
 
