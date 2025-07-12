@@ -23,6 +23,7 @@ private:
     static vector<int> findSubstring(string s, vector<string>& words);
     static string concatHex36(int n);
     static int countDays(int days, vector<vector<int>>& meetings);
+    static vector<string> validateCoupons(vector<string>& code, vector<string>& businessLine, vector<bool>& isActive);
 };
 
 

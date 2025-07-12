@@ -10,9 +10,9 @@ int main() {
     // 哈希表
     // hashmap_test::test();
     // 二叉树
-    BinaryTreeTest::test();
+    // BinaryTreeTest::test();
 
     // LeetCode
-    // LeetCodes().run();
+    LeetCodes().run();
     return 0;
 }

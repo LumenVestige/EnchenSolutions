@@ -47,8 +47,17 @@ void LeetCodes::run() {
     // T1 16进制和36进制的转化
     // cout << concatHex36(13) << endl;
 
-    // 3169 无需开会的工作日
-    int days = 10;
-    vector<vector<int> > meetings = {{5, 7}, {1, 3}, {9, 10}};
-    cout << countDays(days, meetings);
+    // 3169 无需开会的工作日 // 超时 未解决
+    // int days = 10;
+    // vector<vector<int> > meetings = {{5, 7}, {1, 3}, {9, 10}};
+    // cout << countDays(days, meetings);
+
+    // 457 周赛
+    // Q1. 优惠券校验器
+    vector<string> code = {"SAVE20", "", "PHARMA5", "SAVE@20"};
+    vector<string> businessLine = {"restaurant","grocery","pharmacy","restaurant"};
+    vector<bool> isActive = {true,true,true,true};
+    for (auto& item : validateCoupons(code, businessLine, isActive)) {
+        cout << item << " ";
+    }
 }

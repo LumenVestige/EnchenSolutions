@@ -21,4 +21,5 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         binary_tree/binary_tree.h
         binary_tree/binary_tree-test.cpp
         binary_tree/binary_tree-test.h
+        leetcode/[3606]-validate-coupons.cpp
 )
