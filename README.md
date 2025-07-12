@@ -16,3 +16,6 @@ temp << "abc";
 temp.put('a');
 temp.str(); // 取出为string类型
 ```
+
+## 笔记
+### 1. 滑动窗口

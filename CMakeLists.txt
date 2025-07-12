@@ -14,4 +14,8 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         leetcode/[3307]-kth-character-II.cpp
         leetcode/[50]-my-pow.cpp
         leetcode/[1394]-find-lucky.cpp
+        leetcode/[3]-length-of-longest-substring.cpp
+        leetcode/[30]-find-substring.cpp
+        leetcode/25-7-5/[1]-concat-hex36.cpp
+        leetcode/[3146]-count-days.cpp
 )
