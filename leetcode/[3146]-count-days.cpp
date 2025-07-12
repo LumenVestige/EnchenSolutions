@@ -13,9 +13,6 @@ int LeetCodes::countDays(int days, vector<vector<int> > &meetings) {
     //     cout << "]";
     // }
     //
-
-
-    
     // 构建一个数组 大小=days,遍历meetings 如果遇到开会，就把那一天标记为1，最后梳理没有被标记为1的个数
     vector<int> need_meeting(days + 1,0);
     for (auto item: meetings) {

@@ -18,4 +18,7 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         leetcode/[30]-find-substring.cpp
         leetcode/25-7-5/[1]-concat-hex36.cpp
         leetcode/[3146]-count-days.cpp
+        binary_tree/binary_tree.h
+        binary_tree/binary_tree-test.cpp
+        binary_tree/binary_tree-test.h
 )

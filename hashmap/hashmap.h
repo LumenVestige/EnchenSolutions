@@ -13,8 +13,6 @@ using namespace std;
 // 模板类
 template<typename KeyType, typename ValueType>
 class HashMap {
-    vector<list<ValueType>> data; // 简单用vector模拟存储
-private:
     vector<list<pair<KeyType, ValueType>>> buckets;
 
 public:
