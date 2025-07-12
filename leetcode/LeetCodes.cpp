@@ -53,11 +53,18 @@ void LeetCodes::run() {
     // cout << countDays(days, meetings);
 
     // 457 周赛
-    // Q1. 优惠券校验器
-    vector<string> code = {"SAVE20", "", "PHARMA5", "SAVE@20"};
-    vector<string> businessLine = {"restaurant","grocery","pharmacy","restaurant"};
-    vector<bool> isActive = {true,true,true,true};
-    for (auto& item : validateCoupons(code, businessLine, isActive)) {
-        cout << item << " ";
-    }
+    // Q1. T3606 优惠券校验器
+    // vector<string> code = {"SAVE20", "", "PHARMA5", "SAVE@20"};
+    // vector<string> businessLine = {"restaurant","grocery","pharmacy","restaurant"};
+    // vector<bool> isActive = {true,true,true,true};
+    // for (auto& item : validateCoupons(code, businessLine, isActive)) {
+    //     cout << item << " ";
+    // }
+
+    // 2410 运动员和训练师最大的匹配数
+    // 贪心 排序 双指针
+    // 贪心 找到最优解
+    vector<int> players = {4,7,9};
+    vector<int> trainers = {8,2,5,8};
+    cout << matchPlayersAndTrainers(players, trainers);
 }
