@@ -25,6 +25,8 @@ private:
     static int countDays(int days, vector<vector<int>>& meetings);
     static vector<string> validateCoupons(vector<string>& code, vector<string>& businessLine, vector<bool>& isActive);
     static int matchPlayersAndTrainers(vector<int>& players, vector<int>& trainers);
+    static string processStr(string s);
+    static char processStr(string s, long long k);
 };
 
 

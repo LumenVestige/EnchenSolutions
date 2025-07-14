@@ -64,7 +64,13 @@ void LeetCodes::run() {
     // 2410 运动员和训练师最大的匹配数
     // 贪心 排序 双指针
     // 贪心 找到最优解
-    vector<int> players = {4,7,9};
-    vector<int> trainers = {8,2,5,8};
-    cout << matchPlayersAndTrainers(players, trainers);
+    // vector<int> players = {4,7,9};
+    // vector<int> trainers = {8,2,5,8};
+    // cout << matchPlayersAndTrainers(players, trainers);
+
+    // 周赛458 Q1 用特殊操作处理字符串
+    // cout << processStr("a#b%*");
+
+    // 周赛458 Q3 用特殊操作处理字符串 II 超出内存限制的做法
+    cout << processStr("%edx#n#lkc####uom##qg#%#b#ek%##%%ocr#m%#fv%i%%#n#u%%#n#q%v#rwvd##t###%#%%%o*##r#gr*gz#dm%ez",4780);
 }

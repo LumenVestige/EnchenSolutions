@@ -23,4 +23,9 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         binary_tree/binary_tree-test.h
         leetcode/[3606]-validate-coupons.cpp
         leetcode/[2410]-match-players-and-trainers.cpp
+        leetcode/[458]-25-7-13/[Q1]-process-str-I.cpp
+        leetcode/[458]-25-7-13/[Q3]-process-str-II.cpp
+        wuxi_university/WuXiUniversity.h
+        wuxi_university/2024_OJ/[A]-max-gcd.cpp
+        wuxi_university/WuXiUniversity.cpp
 )

@@ -5,6 +5,7 @@
 #include "hashmap/hashmap-test.h"
 #include "leetcode/LeetCodes.h"
 #include "binary_tree/binary_tree-test.h"
+#include "wuxi_university/WuXiUniversity.h"
 
 int main() {
     // 哈希表
@@ -13,6 +14,9 @@ int main() {
     // BinaryTreeTest::test();
 
     // LeetCode
-    LeetCodes().run();
+    // LeetCodes().run();
+
+    // WuxiUniversity
+    WuxiUniversity().run();
     return 0;
 }
