@@ -28,4 +28,7 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         wuxi_university/WuXiUniversity.h
         wuxi_university/2024_OJ/[A]-max-gcd.cpp
         wuxi_university/WuXiUniversity.cpp
+        leetcode/[2]-add-two-numbers.cpp
+        leetcode/[161]-25-7-19/[Q1]-split-array.cpp
+        leetcode/[161]-25-7-19/[Q2]-count-islands.cpp
 )

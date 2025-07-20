@@ -14,9 +14,9 @@ int main() {
     // BinaryTreeTest::test();
 
     // LeetCode
-    // LeetCodes().run();
+    LeetCodes().run();
 
     // WuxiUniversity
-    WuxiUniversity().run();
+    // WuxiUniversity().run();
     return 0;
 }

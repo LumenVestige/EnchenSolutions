@@ -8,6 +8,15 @@
 using namespace std;
 
 
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+
 class LeetCodes {
 public:
     // 入口程序
@@ -27,6 +36,9 @@ private:
     static int matchPlayersAndTrainers(vector<int>& players, vector<int>& trainers);
     static string processStr(string s);
     static char processStr(string s, long long k);
+    static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+    static long long splitArray(vector<int>& nums);
+    static int countIslands(vector<vector<int>>& grid, int k);
 };
 
 

@@ -72,5 +72,29 @@ void LeetCodes::run() {
     // cout << processStr("a#b%*");
 
     // 周赛458 Q3 用特殊操作处理字符串 II 超出内存限制的做法
-    cout << processStr("%edx#n#lkc####uom##qg#%#b#ek%##%%ocr#m%#fv%i%%#n#u%%#n#q%v#rwvd##t###%#%%%o*##r#gr*gz#dm%ez",4780);
+    // cout << processStr("%edx#n#lkc####uom##qg#%#b#ek%##%%ocr#m%#fv%i%%#n#u%%#n#q%v#rwvd##t###%#%%%o*##r#gr*gz#dm%ez",4780);
+
+    // 2 两数相加
+    // ListNode* root_l1 = new ListNode(5);
+    // root_l1->next = new ListNode(6);
+    // ListNode* root_l2 = new ListNode(5);
+    // root_l2->next = new ListNode(4);
+    // root_l2-next->next = new ListNode(9);
+    // addTwoNumbers(root_l1, root_l2);
+
+    // 双周赛 25-9-19 Q1
+    // vector<int> nums = {-602741550,-243097563,435785956,-567926486,-462415908};
+    // cout << splitArray(nums);
+
+    // 双周赛 25-9-19 Q2
+    vector<vector<int>> grid = {
+        {0, 2, 1, 0, 0},
+        {0,5,0,0,5},
+        {0,0,1,0,0},
+        {0,1,4,7,0},
+        {0,2,0,0,8}
+
+    };
+    cout << countIslands(grid, 4);
+
 }
