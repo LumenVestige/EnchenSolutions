@@ -5,6 +5,7 @@
 #include "hashmap/hashmap-test.h"
 #include "leetcode/LeetCodes.h"
 #include "binary_tree/binary_tree-test.h"
+#include "codeforces/codeforces.h"
 #include "wuxi_university/WuXiUniversity.h"
 
 int main() {
@@ -14,7 +15,10 @@ int main() {
     // BinaryTreeTest::test();
 
     // LeetCode
-    LeetCodes().run();
+    // LeetCodes().run();
+
+    // CodeForces
+    CodeForces().run();
 
     // WuxiUniversity
     // WuxiUniversity().run();
