@@ -86,15 +86,20 @@ void LeetCodes::run() {
     // vector<int> nums = {-602741550,-243097563,435785956,-567926486,-462415908};
     // cout << splitArray(nums);
 
-    // 双周赛 25-9-19 Q2
-    vector<vector<int>> grid = {
-        {0, 2, 1, 0, 0},
-        {0,5,0,0,5},
-        {0,0,1,0,0},
-        {0,1,4,7,0},
-        {0,2,0,0,8}
+    // 双周赛 25-9-19 Q2 错误解答 没搞定
+    vector<vector<int> > grid = {
+        {0},
+        {0},
+        {0},
+        {10},
+        {0}
 
     };
-    cout << countIslands(grid, 4);
+    cout << countIslands(grid, 10);
 
+    // 1470 重新排列数组
+    //shuffle()
+
+    // 周赛 459
+    // cout << checkDivisibility(23);
 }

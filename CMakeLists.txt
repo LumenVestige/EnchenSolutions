@@ -31,4 +31,7 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         leetcode/[2]-add-two-numbers.cpp
         leetcode/[161]-25-7-19/[Q1]-split-array.cpp
         leetcode/[161]-25-7-19/[Q2]-count-islands.cpp
+        leetcode/[1470]-shuffle.cpp
+        leetcode/[459]-25-7-20/[Q1]-check-divisibility.cpp
+        leetcode/[459]-25-7-20/[Q2]-count-trapezoids.cpp
 )

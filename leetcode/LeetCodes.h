@@ -21,6 +21,9 @@ class LeetCodes {
 public:
     // 入口程序
     void run();
+
+
+
 private:
     static vector<int> twoSum(vector<int> &nums, int target);
     static vector<string> partitionString(string s);
@@ -39,6 +42,9 @@ private:
     static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
     static long long splitArray(vector<int>& nums);
     static int countIslands(vector<vector<int>>& grid, int k);
+    static vector<int> shuffle(vector<int>& nums, int n);
+    static bool checkDivisibility(int n);
+    static int countTrapezoids(vector<vector<int>> &points);
 };
 
 
