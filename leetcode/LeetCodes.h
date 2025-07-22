@@ -20,7 +20,7 @@ struct ListNode {
 class LeetCodes {
 public:
     // 入口程序
-    void run();
+    static void run();
 
 
 
@@ -45,6 +45,7 @@ private:
     static vector<int> shuffle(vector<int>& nums, int n);
     static bool checkDivisibility(int n);
     static int countTrapezoids(vector<vector<int>> &points);
+    static int numIslands(vector<vector<char>>& grid);
 };
 
 

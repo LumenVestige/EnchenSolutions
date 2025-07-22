@@ -34,4 +34,5 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         leetcode/[1470]-shuffle.cpp
         leetcode/[459]-25-7-20/[Q1]-check-divisibility.cpp
         leetcode/[459]-25-7-20/[Q2]-count-trapezoids.cpp
+        leetcode/[200]-num-is-lands.cpp
 )

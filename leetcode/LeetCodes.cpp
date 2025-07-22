@@ -87,19 +87,29 @@ void LeetCodes::run() {
     // cout << splitArray(nums);
 
     // 双周赛 25-9-19 Q2 错误解答 没搞定
-    vector<vector<int> > grid = {
-        {0},
-        {0},
-        {0},
-        {10},
-        {0}
-
-    };
-    cout << countIslands(grid, 10);
+    // 7月22日 dfs 搞定
+    // vector<vector<int> > grid = {
+    //     {0},
+    //     {0},
+    //     {0},
+    //     {10},
+    //     {0}
+    //
+    // };
+    // cout << countIslands(grid, 10);
 
     // 1470 重新排列数组
     //shuffle()
 
     // 周赛 459
     // cout << checkDivisibility(23);
+
+    // T200 岛屿数量
+    vector<vector<char> > grid = {
+        {'1', '1', '1', '1', '0'},
+        {'1', '1', '0', '1', '0'},
+        {'1', '1', '0', '0', '0'},
+        {'0', '0', '0', '0', '0'}
+    };
+    cout << numIslands(grid);
 }

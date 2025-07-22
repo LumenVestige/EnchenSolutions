@@ -4,7 +4,7 @@
 #include "../LeetCodes.h"
 
 int g_index;
-unordered_map<int, int> g_map;
+unordered_map<int, long long> g_map;
 vector<vector<int>> grid_index, g_grid;
 void pin(int i, int j) {
     // 将当前加进去
