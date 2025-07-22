@@ -9,5 +9,9 @@ void CodeForces::run() {
     // https://codeforces.com/problemset/problem/71/A
     // wayTooLongWords();
     // https://codeforces.com/problemset/problem/231/A
-    team();
+    // team();
+    // https://codeforces.com/problemset/problem/282/A
+    // bitPP();
+    // https://codeforces.com/problemset/problem/158/A
+    nextRound();
 }

@@ -12,6 +12,8 @@ private:
     static void watermelon();
     static int wayTooLongWords();
     static int team();
+    static int bitPP();
+    static int nextRound();
 };
 
 #endif //CODEFORCES_H

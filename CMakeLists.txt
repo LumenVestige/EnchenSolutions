@@ -40,4 +40,6 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         codeforces/[4A]-watermelon.cpp
         codeforces/[71A]-way-too-long-words.cpp
         codeforces/[231A]-team.cpp
+        codeforces/[282-A]-bit-pp.cpp
+        codeforces/[158A]-nextround.cpp
 )
