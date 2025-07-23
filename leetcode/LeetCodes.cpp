@@ -105,11 +105,17 @@ void LeetCodes::run() {
     // cout << checkDivisibility(23);
 
     // T200 岛屿数量
-    vector<vector<char> > grid = {
-        {'1', '1', '1', '1', '0'},
-        {'1', '1', '0', '1', '0'},
-        {'1', '1', '0', '0', '0'},
-        {'0', '0', '0', '0', '0'}
-    };
-    cout << numIslands(grid);
+    // vector<vector<char> > grid = {
+    //     {'1', '1', '1', '1', '0'},
+    //     {'1', '1', '0', '1', '0'},
+    //     {'1', '1', '0', '0', '0'},
+    //     {'0', '0', '0', '0', '0'}
+    // };
+    // cout << numIslands(grid);
+
+    // T1456 定长子串中元音的最大数目
+    // cout << maxVowels("abciiidef", 3);
+
+    // T 1717. 删除子字符串的最大得分 贪心
+    cout << maximumGain("cdbcbbaaabab", 4, 5);
 }

@@ -3,7 +3,7 @@
 //
 #include "../WuXiUniversity.h"
 
-#include "stdc++.h"
+#include "bits/stdc++.h"
 using namespace std;
 
 void WuxiUniversity::max_gcd() {

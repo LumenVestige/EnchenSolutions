@@ -3,8 +3,8 @@ project(Solutions)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Solutions hashmap/hashmap-test.cpp
-        hashmap/hashmap.h
+add_executable(Solutions algorithm/hashmap/hashmap-test.cpp
+        algorithm/hashmap/hashmap.h
         main.cpp
         leetcode/LeetCodes.cpp
         leetcode/LeetCodes.h
@@ -18,9 +18,9 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         leetcode/[30]-find-substring.cpp
         leetcode/25-7-5/[1]-concat-hex36.cpp
         leetcode/[3146]-count-days.cpp
-        binary_tree/binary_tree.h
-        binary_tree/binary_tree-test.cpp
-        binary_tree/binary_tree-test.h
+        algorithm/binary_tree/binary_tree.h
+        algorithm/binary_tree/binary_tree-test.cpp
+        algorithm/binary_tree/binary_tree-test.h
         leetcode/[3606]-validate-coupons.cpp
         leetcode/[2410]-match-players-and-trainers.cpp
         leetcode/[458]-25-7-13/[Q1]-process-str-I.cpp
@@ -42,4 +42,7 @@ add_executable(Solutions hashmap/hashmap-test.cpp
         codeforces/[231A]-team.cpp
         codeforces/[282-A]-bit-pp.cpp
         codeforces/[158A]-nextround.cpp
+        algorithm/sort/quicksort.h
+        leetcode/[1456]-max-vowels.cpp
+        leetcode/[1717]-maximum-gain.cpp
 )
