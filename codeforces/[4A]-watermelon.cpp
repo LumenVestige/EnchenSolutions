@@ -2,7 +2,7 @@
 // Created by sanenchen on 25-7-23.
 //
 #include "codeforces.h"
-#include "stdc++.h"
+#include "bits/stdc++.h"
 using namespace std;
 void CodeForces::watermelon() {
     int w;

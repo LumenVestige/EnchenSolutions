@@ -4,7 +4,7 @@
 
 #ifndef SOLUTIONS_H
 #define SOLUTIONS_H
-#include <stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 
