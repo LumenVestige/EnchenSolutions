@@ -45,4 +45,5 @@ add_executable(Solutions algorithm/hashmap/hashmap-test.cpp
         algorithm/sort/quicksort.h
         leetcode/[1456]-max-vowels.cpp
         leetcode/[1717]-maximum-gain.cpp
+        leetcode/[300]-length-of-LIS.cpp
 )

@@ -117,5 +117,10 @@ void LeetCodes::run() {
     // cout << maxVowels("abciiidef", 3);
 
     // T 1717. 删除子字符串的最大得分 贪心
-    cout << maximumGain("cdbcbbaaabab", 4, 5);
+    // !!!没写
+    // cout << maximumGain("cdbcbbaaabab", 4, 5);
+
+    // T300 最长递增子序列 动态规划
+    vector<int> nums = {0, 3, 1, 6, 2, 2, 7};
+    cout << lengthOfLIS(nums);
 }
