@@ -5,7 +5,6 @@
 
 void bfs(vector<vector<char> > &grid, int i, int j) {
     queue<pair<int ,int>> queue;
-    // 进来后就好看看了
     queue.emplace(i, j);
     while (!queue.empty()) {
         int n_i = queue.front().first;
@@ -37,6 +36,5 @@ int LeetCodes::numIslands(vector<vector<char> > &grid) {
             }
         }
     }
-
     return res;
 }

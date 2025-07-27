@@ -6,15 +6,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<long long> knapsack(vector<long long> &things, long long w) {
-    long long target = ceil(double(w) / 2);
-    long long temp = 0;
-    vector<long long> ans;
-    for (long long i = 0; i < things.size(); i++) {
-        if (things[i] > w - temp)
+vector<unsigned long long> knapsack(vector<unsigned long long> &things, unsigned long long w) {
+    vector<pair<unsigned long long, unsigned long long> > newThings;
+    newThings.reserve(things.size());
+    for (unsigned long long i = 0; i < things.size(); i++) {
+        newThings.emplace_back(things[i], i);
+    }
+
+    sort(newThings.begin(), newThings.end());
+    reverse(newThings.begin(), newThings.end());
+
+    unsigned long long target = (w + 1) / 2;
+    unsigned long long temp = 0;
+    vector<unsigned long long> ans;
+    for (unsigned long long i = 0; i < things.size(); i++) {
+        if (newThings[i].first > w - temp)
             continue;
-        temp += things[i];
-        ans.push_back(i + 1);
+        temp += newThings[i].first;
+        ans.push_back(newThings[i].second + 1);
         if (temp >= target)
             break;
     }
@@ -22,17 +31,18 @@ vector<long long> knapsack(vector<long long> &things, long long w) {
 }
 
 int main() {
-    int n;
+    unsigned long long n;
     cin >> n;
-    for (long long i = 0; i < n; i++) {
-        long long m, w;
+    for (unsigned long long i = 0; i < n; i++) {
+        unsigned long long m, w;
         cin >> m >> w;
-        vector<long long> things(m);
-        for (long long j = 0; j < m; j++) {
+        vector<unsigned long long> things(m);
+        for (unsigned long long j = 0; j < m; j++) {
             cin >> things[j];
         }
         // cout << knapsack(things, w);
         auto temp = knapsack(things, w);
+        sort(temp.begin(), temp.end());
         if (temp.empty())
             cout << "-1";
         else {
