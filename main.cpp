@@ -19,7 +19,7 @@ int main() {
     // QuickSort().quicksort(nums);
 
     // LeetCode
-    LeetCodes().run();
+    LeetCodes::run();
 
     // CodeForces
     // CodeForces().run();

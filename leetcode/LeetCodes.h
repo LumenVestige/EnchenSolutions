@@ -49,6 +49,7 @@ private:
     static int maxVowels(string s, int k);
     static int maximumGain(string s, int x, int y);
     static int lengthOfLIS(vector<int>& nums);
+    static long long maximumMedianSum(vector<int> &nums);
 };
 
 

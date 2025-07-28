@@ -24,8 +24,7 @@ vector<unsigned long long> knapsack(vector<unsigned long long> &things, unsigned
             continue;
         temp += newThings[i].first;
         ans.push_back(newThings[i].second + 1);
-        if (temp >= target)
-            break;
+        if (temp >= target && temp <= w) break;
     }
     return ans;
 }

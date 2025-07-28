@@ -121,6 +121,9 @@ void LeetCodes::run() {
     // cout << maximumGain("cdbcbbaaabab", 4, 5);
 
     // T300 最长递增子序列 动态规划
-    vector<int> nums = {0, 3, 1, 6, 2, 2, 7};
-    cout << lengthOfLIS(nums);
+    // vector<int> nums = {0, 3, 1, 6, 2, 2, 7};
+    // cout << lengthOfLIS(nums);
+
+    vector<int> nums = {2, 1, 3, 2, 1, 3};
+    cout << maximumMedianSum(nums);
 }

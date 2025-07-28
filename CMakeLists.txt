@@ -46,4 +46,5 @@ add_executable(Solutions algorithm/hashmap/hashmap-test.cpp
         leetcode/[1456]-max-vowels.cpp
         leetcode/[1717]-maximum-gain.cpp
         leetcode/[300]-length-of-LIS.cpp
+        leetcode/[460]-25-7-27/[A]-maximum-median-sum.cpp
 )
