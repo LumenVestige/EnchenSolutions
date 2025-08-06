@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int totalFruit(vector<int>& fruits) {
+int totalFruit(vector<int> &fruits) {
     // 左指针 右指针 构建一个滑动窗口
     // 如果目前的情况符合条件（有且仅有两种不同的树）向右扩展 自动维护的
     // 如果目前的情况已经不符合条件了 则左指针收缩 直到符合条件
@@ -29,10 +29,10 @@ int totalFruit(vector<int>& fruits) {
         ans = max(ans, right - left + 1);
     }
     return ans;
-
 }
+
 int main() {
-    vector<int> trees = {3,3,3,1,2,1,1,2,3,3,4};
+    vector<int> trees = {3, 3, 3, 1, 2, 1, 1, 2, 3, 3, 4};
     auto ans = totalFruit(trees);
     cout << ans;
     return 0;
