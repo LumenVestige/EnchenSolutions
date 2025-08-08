@@ -33,6 +33,6 @@ int main() {
     vector<int> fruits = {5, 10, 2};
     vector<int> baskets = {8, 3, 10};
     cout << numOfUnplacedFruits(fruits, baskets);
-    return 0
+    return 0;
     
 }
