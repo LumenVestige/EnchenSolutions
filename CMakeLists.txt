@@ -42,7 +42,6 @@ add_executable(Solutions algorithm/hashmap/hashmap-test.cpp
         codeforces/[231A]-team.cpp
         codeforces/[282-A]-bit-pp.cpp
         codeforces/[158A]-nextround.cpp
-        algorithm/sort/quicksort.h
         leetcode/[1456]-max-vowels.cpp
         leetcode/[1717]-maximum-gain.cpp
         leetcode/[300]-length-of-LIS.cpp
