@@ -49,3 +49,34 @@ bool isPrime(const int num) {
 ## 算法笔记
 ### 1. 滑动窗口
 暂时还没写
+
+### 2. 二分查找
+二分查找核心就是每次将问题的数量减半，不可能存在的区间我们直接废弃掉，不看了  
+二分查找有好多种写法，开区间的写法简单一些  
+```c++
+int lowerBound(vector<int> nums, int target) {
+    int left = -1, right = nums.size();
+    while (left + 1 != right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] >= target)
+            left = mid;
+        else right = mid;
+    }
+    return right;
+}
+
+int upperBound(vector<int> nums, int target) {
+    int left = -1, right = nums.size();
+    while (left + 1 != right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] <= target)
+            left = mid;
+        else right = mid;
+    }
+    return left;
+}
+```
+lowerBound 可以得到最小的大于等于目标值的下标  
+比如 1 1 1 2 2 target = 1 将会返回 0
+upperBound 可以得到最大的大于等于目标值的下标  
+比如 1 1 1 2 2 target = 1 将会返回 2
