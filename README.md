@@ -59,8 +59,8 @@ int lowerBound(vector<int> nums, int target) {
     while (left + 1 != right) {
         int mid = left + (right - left) / 2;
         if (nums[mid] >= target)
-            left = mid;
-        else right = mid;
+            right = mid;
+        else left = mid;
     }
     return right;
 }
@@ -77,6 +77,6 @@ int upperBound(vector<int> nums, int target) {
 }
 ```
 lowerBound 可以得到最小的大于等于目标值的下标  
-比如 1 1 1 2 2 target = 1 将会返回 0
+比如 1 1 1 2 2 target = 1 将会返回 0  
 upperBound 可以得到最大的大于等于目标值的下标  
 比如 1 1 1 2 2 target = 1 将会返回 2
