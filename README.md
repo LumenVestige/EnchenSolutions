@@ -79,4 +79,11 @@ int upperBound(vector<int> nums, int target) {
 lowerBound 可以得到最小的大于等于目标值的下标  
 比如 1 1 1 2 2 target = 1 将会返回 0  
 upperBound 可以得到最大的大于等于目标值的下标  
-比如 1 1 1 2 2 target = 1 将会返回 2
+比如 1 1 1 2 2 target = 1 将会返回 2  
+
+
+## 自己瞎JB想的算法
+### 1. 插眼法
+例题：[https://atcoder.jp/contests/abc419/tasks/abc419_d](https://atcoder.jp/contests/abc419/tasks/abc419_d)  
+比如两个数组来回交换数据，可以标记一下，要交换的数组就设置一个differ[] 之后++  
+输出时候判断differ是奇数还是偶数 因为偶数就会换回来了 就不需要考虑了  
