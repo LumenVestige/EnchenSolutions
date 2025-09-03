@@ -5,10 +5,7 @@
 #include "algorithm/hashmap/hashmap-test.h"
 #include "leetcode/LeetCodes.h"
 #include "algorithm/binary_tree/binary_tree-test.h"
-#include "algorithm/sort/quicksort.h"
 #include "codeforces/codeforces.h"
-#include "wuxi_university/WuXiUniversity.h"
-
 int main() {
     // 哈希表
     // hashmap_test::test();
