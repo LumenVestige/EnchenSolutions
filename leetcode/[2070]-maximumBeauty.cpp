@@ -20,6 +20,7 @@ vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
         return a[0] < b[0];
     });
     unordered_map<int, int> hash_map;
+    unordered_map<>;
     vector<int> price, ans;
     int currentMax = 0;
     // 构建前缀最大值
