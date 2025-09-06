@@ -28,5 +28,6 @@ int main() {
     vector<int> nums = {7, 4, 3, 9, 1, 8, 5, 2, 6};
     for (auto &it: getAverages(nums, 3))
         cout << it << " ";
+    cout << endl;
     return 0;
 }
