@@ -3,8 +3,6 @@
 //
 #include <bits/stdc++.h>
 using namespace std;
-
-
 long long minNumberOfSeconds(int mountainHeight, vector<int> &workerTimes) {
     // 前缀和 记录前n和
     vector<long long> prefix(mountainHeight + 1, 0);
@@ -19,7 +17,7 @@ long long minNumberOfSeconds(int mountainHeight, vector<int> &workerTimes) {
     auto check = [&](long long mid)-> bool {
         // 所有工人在 mid 秒内 最大挖掘高度
         long long height = 0;
-        if (workerTimes.size() >50) {
+        if (workerTimes.size() >100) {
             height = 0;
             for (const auto &i: workerTimes) {
                 long long tmpHeight = 1;
@@ -51,8 +49,9 @@ long long minNumberOfSeconds(int mountainHeight, vector<int> &workerTimes) {
     }
     return right;
 }
+
 int main() {
-    vector<int> workTimes = {2,1,1};
-    cout << minNumberOfSeconds(4, workTimes)<< endl;
+    vector<int> workTimes = {2, 1, 1};
+    cout << minNumberOfSeconds(4, workTimes);
     return 0;
 }
