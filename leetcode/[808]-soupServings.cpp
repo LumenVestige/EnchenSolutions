@@ -22,7 +22,6 @@ double soupServings(int n) {
         memo[{a, b}] = res;
         return res;
     };
-
     return dfs(n, n);
 }
 

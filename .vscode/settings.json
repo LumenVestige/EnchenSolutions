@@ -1,4 +1,5 @@
 {
+    "clangd.arguments": ["--header-insertion=never"],
     "files.associations": {
         "functional": "cpp",
         "any": "cpp",
