@@ -5,7 +5,7 @@
             "name": "g++ - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/media/sanenchen/Codes/tmp/output",  // 你的可执行文件路径
+            "program": "/Users/sanenchen/Desktop/run_temp/output",  // 你的可执行文件路径
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",  // 工作目录（源代码目录）
@@ -19,7 +19,7 @@
                 }
             ],
             "preLaunchTask": "C/C++: g++ 生成活动文件",  // 与 tasks.json 的 label 一致
-            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "gdb",
             "logging": {
                 "moduleLoad": false  // 关闭冗余的模块加载日志
             }
