@@ -19,6 +19,7 @@ public:
         // 判断是否超出limit
         if (limit == packets.size()) {
             packets.pop_front(); // 弹出最前面的
+            if (s.find(array<int,3>{source, destination, timestamp}) == s.end())
             s.erase(s.begin());
         }
         packets.push_back({source, destination, timestamp});
@@ -44,7 +45,7 @@ public:
 
 int main() {
     Router r = Router(3);
-    r.addPacket(1,4,90);
+    r.addPacket(1,5,1);
     r.addPacket(2,5,90);
     r.addPacket(2,5,90);
     r.addPacket(3,5,95);
