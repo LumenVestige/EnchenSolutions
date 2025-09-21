@@ -22,10 +22,11 @@ int main() {
     }
     // 去除前导0
     int p = 0;
-    while (p != 0) {
+    while (p == 0) {
         if (s[p] == '0') {
             s.erase(s.begin());
         }
+        p++;
     }
     cout << s;
     return 0;
