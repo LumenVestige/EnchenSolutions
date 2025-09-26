@@ -5,17 +5,22 @@
 using namespace std;
 
 long long maxProfit(vector<int>& prices, vector<int>& strategy, int k) {
-    int n = prices.size();
-    vector<long long> sum(n + 1), sum_sell(n + 1);
-    for (int i = 0; i < n; i++) {
-        sum[i + 1] = sum[i] + prices[i] * strategy[i];
-        sum_sell[i + 1] = sum_sell[i] + prices[i];
+    // 计算原始数组
+    vector<int> originPrefix(prices.size() + 1, 0);
+    for (int i = 1; i <= prices.size(); ++i) {
+        originPrefix[i] = originPrefix[i - 1] + prices[i - 1] * strategy[i - 1];
     }
-
-    long long ans = sum[n]; // 不修改
-    for (int i = k; i <= n; i++) {
-        long long res = sum[i - k] + sum[n] - sum[i] + sum_sell[i] - sum_sell[i - k / 2];
-        ans = max(ans, res);
+    // 计算改为卖出的prefix
+    vector<int> payoutPrefix(prices.size() + 1, 0);
+    for (int i = 1; i <= prices.size(); ++i) {
+        payoutPrefix[i] = payoutPrefix[i - 1] + prices[i - 1];
+    }
+    // 遍历每一个
+    int ans = originPrefix[prices.size()];
+    for (int i = k; i <= prices.size(); ++i) {
+        // 向前退k个
+        int tmp = originPrefix[i - k] + originPrefix[prices.size()] - originPrefix[i] + payoutPrefix[i] - payoutPrefix[i - k / 2];
+        ans = max(ans, tmp);
     }
     return ans;
 }
