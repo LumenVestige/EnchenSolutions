@@ -16,20 +16,6 @@ signed main() {
     // [0, p), (p, size - 1]
     string main = s.substr(0, posDot);
     string small = s.substr(posDot + 1, s.size() - 1);
-    // 递归查找
-    function<int(string, int)> solve = [&](string tmp, int pos)-> int {
-        // 终点
-        if (pos == tmp.size()) {
-            return 0;
-        }
-        int current = tmp[pos] - '0';
-        int next = solve(tmp, pos+1);
-        if (next >= 5) {
-            current++;
-        }
-        if (current == 10) return 9;
-        return current;
-    };
     int lastSmall = small[0] - '0';
     if (lastSmall >= 5) {
         if (main[main.size() - 1] != '9') {

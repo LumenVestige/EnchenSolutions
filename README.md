@@ -54,7 +54,7 @@ bool isPrime(const int num) {
 二分查找核心就是每次将问题的数量减半，不可能存在的区间我们直接废弃掉，不看了  
 二分查找有好多种写法，开区间的写法简单一些  
 ```c++
-int lowerBound(vector<int> nums, int target) {
+int lowerBound(vector<int>& nums, int target) {
     int left = -1, right = nums.size();
     while (left + 1 != right) {
         int mid = left + (right - left) / 2;
@@ -65,7 +65,7 @@ int lowerBound(vector<int> nums, int target) {
     return right;
 }
 
-int upperBound(vector<int> nums, int target) {
+int upperBound(vector<int>& nums, int target) {
     int left = -1, right = nums.size();
     while (left + 1 != right) {
         int mid = left + (right - left) / 2;
