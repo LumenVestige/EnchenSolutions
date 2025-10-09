@@ -41,7 +41,7 @@ private:
     // }
 public:
     MyCalendar() {
-        org.clear();
+        // org.clear();
     }
 
     bool book(int startTime, int endTime) {
