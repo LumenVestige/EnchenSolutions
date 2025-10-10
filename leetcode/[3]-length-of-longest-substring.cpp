@@ -43,18 +43,33 @@ int LeetCodes::lengthOfLongestSubstring(string s) {
     //     }
     // }
     // return temp_ans;
+
     // 2025.9.6 前来优化
-    int ans = 0, left = 0;
-    unordered_map<char, int> cnt;
-    for (int right = 0; right < s.size(); ++right) {
-        // 入
-        cnt[s[right]]++;
-        while (cnt[s[right]] > 1) {
-            // 左边出去
-            cnt[s[left]]--;
+    // int ans = 0, left = 0;
+    // unordered_map<char, int> cnt;
+    // for (int right = 0; right < s.size(); ++right) {
+    //     // 入
+    //     cnt[s[right]]++;
+    //     while (cnt[s[right]] > 1) {
+    //         // 左边出去
+    //         cnt[s[left]]--;
+    //         left++;
+    //     }
+    //     ans = max(ans, right - left + 1);
+    // }
+
+    // 2025.10.10 用左开右闭写法
+    unordered_map<char, int> window;
+    int left = 0, right = 0, ans = INT_MIN;
+    while (right < s.size()) {
+        char r = s[right];
+        window[r]++;
+        right++;
+        while (window[r] > 1) {
+            window[s[left]]--;
             left++;
         }
-        ans = max(ans, right - left + 1);
+        ans = max(ans, right - left);
     }
     return ans;
 }
