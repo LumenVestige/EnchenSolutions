@@ -1,14 +1,11 @@
 //
 // Created by sanenchen on 25-10-10.
 //
-#include <cstdio>
+#include <stdio.h>
 #include <stdlib.h>
-#include <cmath>
+#include <math.h>
+#include <string.h>
 int main() {
-    float x, y;
-    int a;
-    scanf("%f%d%f", &x, &a, &y);
-    float c = x+a%3*(int)(x+y)%2/4;
-    printf("%.6f", c);
+    printf("2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 ");
     return 0;
 }
