@@ -5,19 +5,19 @@ int minOperations(vector<int>& nums, int x) {
     for (auto& i : nums) 
         sum += i;
     int target = sum - x;
-    if (target == 0) return nums.size();
-        if (target < 0) return -1;
-    int l = 0, ans = -1, tmp = 0;
+    // if (target == 0) return nums.size();
+    //     if (target < 0) return -1;
+    int l = 0, ans = INT_MIN, tmp = 0;
     for (int r = 0; r < nums.size(); ++r) {
         tmp += nums[r];
-        while (tmp > target && r > l) {
+        while (tmp > target && r >= l) {
             tmp -= nums[l];
             l++;
         }
         if (tmp == target) 
             ans = max(ans, r - l + 1);
     }
-    if (nums.size() - ans > nums.size()) return 0;
+    if (ans == INT_MIN) return -1;
     return nums.size() - ans;
 }
 int main() {
