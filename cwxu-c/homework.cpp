@@ -5,10 +5,10 @@
 #include <stdlib.h>
 #include <cmath>
 int main() {
-    float x, y;
-    int a;
-    scanf("%f%d%f", &x, &a, &y);
-    float c = x+a%3*(int)(x+y)%2/4;
-    printf("%.6f", c);
+    double a, b;
+    scanf("%lf%lf", &a, &b);
+    double min = ((a > b) ? b : a);
+    double max = ((a > b) ? a : b);
+    printf("%.2lf %.2lf", min, max);
     return 0;
 }
