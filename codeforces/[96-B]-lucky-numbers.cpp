@@ -37,7 +37,6 @@ bool isSupLucky(long long n) {
 }
 
 int main() {
-
     cin >> base_n;
     // 用bfs 以此增增为4或者7 直到可以为止
     queue<long long> q;
