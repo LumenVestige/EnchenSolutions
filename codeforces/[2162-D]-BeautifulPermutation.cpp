@@ -18,27 +18,37 @@ void solve() {
     // 下面我就要找到从那个地方开始变化的
     // 二分查找 去找到这个变化的节点 找到新结果比原结果大1的位置
     // 如果相等则右推 如果等于1则找到 如果大于一则左推
-    int mid = (1 + n) / 2;
-    cout << "1 1 " << mid << endl;
-    cout.flush();
-    cin >> oriN;
-    cout << "2 1 " << mid << endl;
-    cout.flush();
-    cin >> chaN;
-    int last = n;
-    while (oriN + 1 != chaN) {
-        if (chaN > oriN) {
-            mid = (1 + mid) / 2;
-        } else {
-            mid = (mid + last) / 2;
-        }
-        last = mid;
+    // int mid = (1 + n) / 2;
+    // cout << "1 1 " << mid << endl;
+    // cin >> oriN;
+    // cout << "2 1 " << mid << endl;
+    // cin >> chaN;
+
+    // while (oriN + 1 != chaN) {
+    //     if (chaN > oriN) {
+    //         mid = (1 + mid) / 2;
+    //     } else {
+    //         mid = (mid + n) / 2;
+    //     }
+    //     cout << "1 1 " << mid << endl;
+    //     cin >> oriN;
+    //     cout << "2 1 " << mid << endl;
+    //     cin >> chaN;
+    // }
+    int left = 0, right = n + 1;
+    while (left + 1 != right) {
+        int mid = (left + right) / 2;
         cout << "1 1 " << mid << endl;
         cin >> oriN;
         cout << "2 1 " << mid << endl;
         cin >> chaN;
+        if (chaN > oriN) {
+            right = mid;
+        } else {
+            left = mid;
+        }
     }
-    cout << "! " << mid << " " << mid + changeNumber - 1 << endl;
+    cout << "! " << right << " " << right + changeNumber - 1 << endl;
 }
 
 int main() {
