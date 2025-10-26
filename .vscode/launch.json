@@ -5,7 +5,7 @@
             "name": "g++ - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/media/sanenchen/Codes/tmp/output",  // 你的可执行文件路径
+            "program": "/run/media/sanenchen/Codes/tmp/output",  // 你的可执行文件路径
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",  // 工作目录（源代码目录）
