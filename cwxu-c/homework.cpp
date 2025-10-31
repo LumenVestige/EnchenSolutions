@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 int main() {
-    printf("%c", 0x7);
+    int c = !0 * 2 * 2;
+    printf("%d\n", c);
     return 0;
 }
