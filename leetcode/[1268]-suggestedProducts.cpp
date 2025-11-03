@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 class TrieTree {
-    
     struct Node {
         Node* children[26];
         bool end = false;
