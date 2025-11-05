@@ -5,11 +5,7 @@
 using namespace std;
 
 int main() {
-    map<int, long long> a;
-    for (int i = 0; i < 1e5; ++i) {
-        a[i] = 0;
-    }
-    cout << "finish";
-    getchar();
-    return 0;
+    int _=0;
+    cout << ~~(0^_^0);
+    return ~~(0^_^0);
 }
