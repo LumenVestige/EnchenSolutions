@@ -1,10 +1,7 @@
-//
-// Created by sanenchen on 25-10-10.
-//
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    cout << sizeof(int);
+    cout << "Hello Shanxi and XCPC!";
     return 0;
 }
