@@ -7,23 +7,18 @@ void solve() {
     int n;
     cin >> n;
     vector<int> nums(n);
-    int a = 0, b = 0;
     for (int i = 0; i < n; ++i) {
         cin >> nums[i];
-        if (nums[i] & 1) {
-            // 奇数
-            a++;
-        } else {
-            b++;
+    }
+    for (int i = 2; i < 600; ++i) {
+        for (auto& k : nums) {
+            if (gcd(i, k) == 1) {
+                cout << i << endl;
+                return;
+            }
         }
     }
-    if (a != 0 && b != 0) {
-        sort(nums.begin(), nums.end());
-    }
-    for (auto& i : nums) {
-        cout << i << " ";
-    }
-    cout << endl;
+    cout << -1 << endl;
 }
 
 signed main() {
