@@ -46,3 +46,62 @@ using namespace std;
 
 //     return ans;
 // }
+vector<int> findSubstring(string s, vector<string>& words) {
+    // 截取
+    vector<string> strs;
+    unordered_multiset<string> strsSet;
+    int p = 0, token = words[0].size();
+    while (p < s.size()) {
+        string tmp;
+        for (int i = 0; i < token; ++i) {
+            tmp += s[p];
+            p++;
+        }
+        strs.push_back(tmp);
+    }
+    for (int i = 0; i < words.size(); ++i) {
+        strsSet.insert(words[i]);
+    }
+    int left = 0, right = 0;
+    vector<int> ans;
+    int n = words.size();
+    unordered_map<string, int> cnt;
+    int tmp = 0;
+    while (right < strs.size()) {
+        // 直接跳过的情况
+        // 1. 出现不存在的 直接指针都调到下一位，清空当前缓存
+        // 2. 出现之前重复的
+        if (!strsSet.count(strs[right])) {
+            right++;
+            left = right;
+            cnt.clear();
+            tmp = 0;
+            continue;
+        }
+        cnt[strs[right]]++;
+        tmp++;
+        while (cnt[strs[right]] > strsSet.count(strs[right]) && left <= right) {
+            cnt[strs[left]]--;
+            tmp--;
+            left++;
+        }
+        if (tmp == n) {
+            ans.push_back(left * token);
+            right++;
+            cnt[strs[left]]--;
+            left++;
+            tmp--;
+            continue;
+        }
+        right++;
+    }
+    return ans;
+}
+
+int main() {
+    vector<string> words = {"fooo","barr","wing","ding","wing"};
+    for (auto& i : findSubstring("lingmindraboofooowingdingbarrwingmonkeypoundcake", words)) {
+        cout << i << " ";
+    }
+    return 0;
+}
