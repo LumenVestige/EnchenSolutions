@@ -17,6 +17,7 @@ func maxPathScore(grid [][]int, k int) int {
 			}
 		}
 	}
+
 	dfs = func(x int, y int, k int) int {
 		if x < 0 || y < 0 || k < 0 {
 			return math.MinInt
