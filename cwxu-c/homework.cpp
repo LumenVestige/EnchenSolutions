@@ -1,9 +1,13 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+// void swap(int& a, int& b) {
+//     a = a ^ b;
+//     b = a ^ b;
+//     a = a ^ b;
+// }
 int main() {
-    int a;
-    cin >> a;
-    cout << a;
-    cout << "Hello World!" << endl;
+    printf("%X", 2222);
     return 0;
 }
+
