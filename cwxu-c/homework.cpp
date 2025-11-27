@@ -1,13 +1,12 @@
 #include <stdio.h>
-  #include <stdlib.h>
-  
-  int main() {
-    int n;
-    scanf("%d", &n);
-    double ans = 1;
-    for (int i = 2; i <= n; ++i) {
-      ans -= 1.0 / i;
-    }
-    printf("%.5lf", ans);
+#include <stdlib.h>
+#include <math.h>
+// void swap(int& a, int& b) {
+//     a = a ^ b;
+//     b = a ^ b;
+//     a = a ^ b;
+// }
+int main() {
+    printf("%X", 2222);
     return 0;
-  }
+}
