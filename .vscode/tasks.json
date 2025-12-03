@@ -8,9 +8,10 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-std=c++17",
                 "${file}",
                 "-o",
-                "/run/media/sanenchen/Codes/tmp/output" // 统一输出到指定目录
+                "/Volumes/Codes/tmp/output" // 统一输出到指定目录
             ],
             "options": {
                 "cwd": "${fileDirname}"

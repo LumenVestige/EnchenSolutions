@@ -14,6 +14,7 @@ func checkSubarraySum(nums []int, k int) bool {
 			}
 		} else {
 			pos[key] = i
+
 		}
 	}
 	return false
