@@ -3,6 +3,7 @@ package main
 import (
 	"container/list"
 	"fmt"
+	"strings"
 )
 
 // 用栈做模拟
@@ -37,28 +38,15 @@ func countCollisions(directions string) int {
 
 // 脑筋急转弯。。。
 func countCollisions2(directions string) int {
-	totalRun, L, R := 0, 0, 0
-	flag := true
-	for _, v := range directions {
-		if v != 'S' {
-			totalRun++
-		}
-		if flag && v == 'L' {
-			L++
-		} else {
-			flag = false
-		}
-	}
-	flag = true
-	for i := len(directions) - 1; i >= 0; i-- {
-		v := directions[i]
-		if flag && v == 'R' {
-			L++
-		} else {
-			flag = false
-		}
-	}
-	return totalRun - L - R
+	directions = strings.TrimRight(directions, "R")
+	directions = strings.TrimLeft(directions, "L")
+	//ans := 0
+	//for _, v := range directions {
+	//	if v != 'S' {
+	//		ans++
+	//	}
+	//}
+	return len(directions) - strings.Count(directions, "S")
 }
 func main() {
 	fmt.Println(countCollisions2("RSL"))
