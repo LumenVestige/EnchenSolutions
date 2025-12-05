@@ -32,12 +32,14 @@ func CF2171C(_in io.Reader, _w io.Writer) {
 			Fprintln(out, "Tie")
 			return
 		}
-		for i := range n {
+		for i := 0; i < n; i++ {
 			if numsA[i] != numsB[i] {
 				if ((i + 1) & 1) == 1 {
-					nA++
+					nA = 1
+					nB = 0
 				} else {
-					nB++
+					nA = 0
+					nB = 1
 				}
 			}
 		}
