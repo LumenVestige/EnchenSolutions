@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++ 生成活动文件",
+            "label": "C/C++: g++ Build Active File",
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
@@ -11,19 +11,17 @@
                 "-std=c++17",
                 "${file}",
                 "-o",
-                "/Volumes/Codes/tmp/output" // 统一输出到指定目录
+                "/Volumes/Codes/tmp/output"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
-            "detail": "编译器: /usr/bin/g++"
+            "detail": "C++ Build Task"
         }
     ]
 }
