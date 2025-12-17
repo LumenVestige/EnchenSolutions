@@ -58,12 +58,23 @@ int longestConsecutive(vector<int> &nums) {
         cout << it.first << " " << it.second << endl;
         ans = max(ans, it.first - it.second + 1);
     }
-
     return ans;
 }
 
 int main() {
-    vector<int> nums = {0,3,7,2,5,8,4,6,0,1};
+    vector<int> nums = {0,3,3,2,5,3,4,6,0,1};
     cout << longestConsecutive(nums);
+    set<int> se(nums.begin(), nums.end());
+    cout << distance(se.find(0), se.find(3));
+    // for (auto i = nums.begin(); i != nums.end(); ++i) {
+    //     auto tmp = i;
+    //     cout << "111"<< endl;;
+    //     if (*i == 1) {
+    //         nums.erase(tmp);
+    //     }
+    // }
+    // for (auto& i : nums) {
+    //     cout << i << " ";
+    // }
     return 0;
 }

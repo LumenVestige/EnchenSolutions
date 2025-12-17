@@ -23,20 +23,32 @@ using namespace std;
 //     dfs(0);
 // }
 
+// vector<vector<string>> groupAnagrams(vector<string>& strs) {
+//     unordered_map<string, vector<string>> str;
+//     for (auto& i : strs) {
+//         string tmp = i;
+//         sort(i.begin(), i.end());
+//         str[i].push_back(tmp);
+//     }
+//     vector<vector<string>> ans;
+//     for (auto& i : str) {
+//         ans.push_back(i.second);
+//     }
+//     return ans;
+// }
 vector<vector<string>> groupAnagrams(vector<string>& strs) {
-    unordered_map<string, vector<string>> str;
-    for (auto& i : strs) {
+    unordered_map<string, vector<string>> cnt;
+    for (auto i : strs) {
         string tmp = i;
-        sort(i.begin(), i.end());
-        str[i].push_back(tmp);
+        sort(tmp.begin(), tmp.end());
+        cnt[tmp].push_back(i);
     }
     vector<vector<string>> ans;
-    for (auto& i : str) {
-        ans.push_back(i.second);
+    for (auto& [k, v] : cnt) {
+        ans.push_back(v);
     }
     return ans;
 }
-
 int main() {
     //allCompose(100);
     return 0;
