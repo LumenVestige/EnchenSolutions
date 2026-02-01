@@ -10,6 +10,8 @@ int main() {
     cout << &a << endl;
     auto& b = *f(a);
     cout << &(*f(a)) << endl << &b;
+    unordered_map<string, int> cnt;
+    cnt.erase("a");
     return 0;
 }
 
