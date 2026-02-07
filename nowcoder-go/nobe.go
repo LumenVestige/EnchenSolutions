@@ -10,10 +10,15 @@ func main() {
 	r, w := bufio.NewReader(os.Stdin), bufio.NewWriter(os.Stdout)
 	_, _ = r, w
 	defer w.Flush()
-	var str []byte
-	fmt.Fscan(r, &str)
-	for i := 0; i < len(str)/2; i++ {
-		str[i], str[len(str)-i-1] = str[len(str)-i-1], str[i]
+	var n int
+	fmt.Fscan(r, &n)
+	nums := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Fscan(r, &nums[i])
 	}
-	fmt.Println(string(str))
+	for i := 0; i < n-5; i++ {
+		for j := 0; j < 4; j++ {
+			
+		}
+	}
 }
