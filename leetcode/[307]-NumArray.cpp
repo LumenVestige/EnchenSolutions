@@ -156,95 +156,151 @@ using namespace std;
 // };
 
 
-// 经典不过时，25.11.5再来一遍
-// 加一个懒更新
-class SegementTree {
-public:
-    vector<int> mx;
-    vector<int> lazy;
-    SegementTree(int size) {
-        mx = vector<int>(4 * size);
-        lazy = vector<int>(4 * size, 0);
-    }
-    void maintain(int o) {
-        mx[o] = mx[o * 2] + mx[o * 2 + 1];
-    }
-    void build(int o, int l, int r, vector<int>& n) {
-        if (l == r) {
-            mx[o] = n[l];
-            return;
-        }
-        int mid = (l + r) / 2;
-        build(o * 2, l, mid, n);
-        build(o * 2 + 1, mid + 1, r, n);
-        maintain(o);
-    }
-    void pushDown(int o) {
-        if (lazy[o]) {
-            // 往他的孩子上告状
-            mx[o * 2] += lazy[o];
-            mx[o * 2 + 1] += lazy[o];
-            lazy[o * 2] += lazy[o];
-            lazy[o * 2 + 1] += lazy[o];
-            maintain(o);
-            lazy[o] = 0;
-        }
-    }
-    void update(int o, int l, int r, int index, int val, int org) {
-        // if (l == r && l == index) {
-        //     mx[o] = val;
-        //     return;
-        // }
-        if (l == r && l == index) {
-            lazy[o] += (-org + val);
-            mx[o] += (-org + val);
-            return;
-        }
-        pushDown(o);
-        int mid = (l + r) / 2;
-        if (index <= mid) {
-            update(o * 2, l, mid, index, val, org);
-        } else {
-            update(o * 2 + 1, mid + 1, r, index, val, org);
-        }
-        maintain(o);
-    }
-    int query(int o, int l, int r, int ql, int qr) {
+// // 经典不过时，25.11.5再来一遍
+// // 加一个懒更新
+// class SegementTree {
+// public:
+//     vector<int> mx;
+//     vector<int> lazy;
+//     SegementTree(int size) {
+//         mx = vector<int>(4 * size);
+//         lazy = vector<int>(4 * size, 0);
+//     }
+//     void maintain(int o) {
+//         mx[o] = mx[o * 2] + mx[o * 2 + 1];
+//     }
+//     void build(int o, int l, int r, vector<int>& n) {
+//         if (l == r) {
+//             mx[o] = n[l];
+//             return;
+//         }
+//         int mid = (l + r) / 2;
+//         build(o * 2, l, mid, n);
+//         build(o * 2 + 1, mid + 1, r, n);
+//         maintain(o);
+//     }
+//     void pushDown(int o) {
+//         if (lazy[o]) {
+//             // 往他的孩子上告状
+//             mx[o * 2] += lazy[o];
+//             mx[o * 2 + 1] += lazy[o];
+//             lazy[o * 2] += lazy[o];
+//             lazy[o * 2 + 1] += lazy[o];
+//             maintain(o);
+//             lazy[o] = 0;
+//         }
+//     }
+//     void update(int o, int l, int r, int index, int val, int org) {
+//         // if (l == r && l == index) {
+//         //     mx[o] = val;
+//         //     return;
+//         // }
+//         if (l == r && l == index) {
+//             lazy[o] += (-org + val);
+//             mx[o] += (-org + val);
+//             return;
+//         }
+//         pushDown(o);
+//         int mid = (l + r) / 2;
+//         if (index <= mid) {
+//             update(o * 2, l, mid, index, val, org);
+//         } else {
+//             update(o * 2 + 1, mid + 1, r, index, val, org);
+//         }
+//         maintain(o);
+//     }
+//     int query(int o, int l, int r, int ql, int qr) {
         
-        if (l >= ql && r <= qr) {
-            return mx[o];
-        }
-        pushDown(o);
-        int mid = (l + r) / 2;
-        int tmp = 0;
-        if (mid >= ql) {
-            tmp += query(o * 2, l, mid, ql, qr);
-        }
-        if (mid + 1 <= qr) {
-            tmp += query(o * 2 + 1, mid + 1, r, ql, qr);
-        }
-        return tmp;
+//         if (l >= ql && r <= qr) {
+//             return mx[o];
+//         }
+//         pushDown(o);
+//         int mid = (l + r) / 2;
+//         int tmp = 0;
+//         if (mid >= ql) {
+//             tmp += query(o * 2, l, mid, ql, qr);
+//         }
+//         if (mid + 1 <= qr) {
+//             tmp += query(o * 2 + 1, mid + 1, r, ql, qr);
+//         }
+//         return tmp;
+//     }
+
+// };
+
+// class NumArray {
+//     SegementTree* tree;
+//     int size = 0;
+//     vector<int> nums;
+// public:
+//     NumArray(vector<int>& nums) : nums(nums) {
+//         size = nums.size();
+//         tree = new SegementTree(nums.size());
+//         tree->build(1, 0, nums.size() - 1, nums);
+//     }
+    
+//     void update(int index, int val) {
+//         tree->update(1, 0, size - 1, index, val, nums[index]);
+//         nums[index] = val;
+//     }
+    
+//     int sumRange(int left, int right) {
+//         return tree->query(1, 0, size - 1, left, right);
+//     }
+// };
+// 经典还是不过时，26.3.10 用树状数组再来一遍
+
+class BIT {
+private:
+    vector<int> mx;
+    int n;
+    int lowBit(int x) {
+        return x & -x;
     }
 
+public:
+    BIT(vector<int>& nums) : n(nums.size()) {
+        mx.resize(nums.size() + 1);
+        for (int i = 0; i < nums.size(); ++i) {
+            change(i, nums[i]);
+        }
+    }
+    void change(int x, int v) {
+        x++;
+        while (x <= n) {
+            mx[x] += v;
+            x += lowBit(x);
+        }
+    }
+    int query(int x) {
+        x++;
+        int t = 0;
+        while (x) {
+            t += mx[x];
+            x -= lowBit(x);
+        }
+        return t;
+    }
 };
 
 class NumArray {
-    SegementTree* tree;
-    int size = 0;
-    vector<int> nums;
 public:
+    BIT* bit;
+    vector<int> nums;
     NumArray(vector<int>& nums) : nums(nums) {
-        size = nums.size();
-        tree = new SegementTree(nums.size());
-        tree->build(1, 0, nums.size() - 1, nums);
+        bit = new BIT(nums);
     }
     
     void update(int index, int val) {
-        tree->update(1, 0, size - 1, index, val, nums[index]);
+        bit->change(index, val - nums[index]);
         nums[index] = val;
     }
     
     int sumRange(int left, int right) {
-        return tree->query(1, 0, size - 1, left, right);
+        int t = 0;
+        if (left-1 >= 0) {
+            t = bit->query(left-1);
+        }
+        return bit->query(right) - t;
     }
 };
