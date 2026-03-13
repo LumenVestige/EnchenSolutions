@@ -1,17 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-auto f(vector<int>& v) {
-    return &v;
-}
+#include <stdio.h>
 
 int main() {
-    vector<int> a;
-    cout << &a << endl;
-    auto& b = *f(a);
-    cout << &(*f(a)) << endl << &b;
-    unordered_map<string, int> cnt;
-    cnt.erase("a");
+    int max(int x, int y, int z);
+    int a, b, c, d;
+    scanf("%d%d%d", &a, &b, &c);
+    d = max(a, b, c);
+    printf("%d\n", d);
     return 0;
 }
 
+int max(int x, int y, int c) {
+    int f;
+    f = (a > b) ? a : b;
+    f = (f > c) ? f : c;
+    return f;
+}
