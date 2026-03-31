@@ -4,7 +4,7 @@ using namespace std;
 #define endl "\n"
 
 signed main() {
-    int n, m, s;
+    int n, m ,s;
     cin >> n >> m >> s;
     vector<vector<pair<int, int>>> grids(n+1);
     for (int i = 0; i < m; ++i) {
