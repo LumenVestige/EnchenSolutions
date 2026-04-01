@@ -21,21 +21,20 @@ void solve() {
     for (int i = n; i >= 1; --i) {
         afterMin[i] = min(afterMin[i+1], nums[i]);
     }
-    vector<int> ansNums(n);
+    //cout << canModi << endl;
     int ans = 0;
     for (int i = 1; i <= n; ++i) {
         ans++;
-        ansNums[i] = ans;
-        if (ansNums[i] - nums[i] > 0) {
-            needModi += ansNums[i] - nums[i];
+        if (nums[i] - ans > 0) {
+            needModi += nums[i] - ans;
         }
-        if (canModi > 0 && needModi > 0 && ans+1 > afterMin[i]) {
+        if (canModi > 0 && needModi > 0 && ans+1 < afterMin[i+1]) {
             ans++;
             needModi--;
             canModi--;
         }
     }
-    cout << ans << endl;
+    cout << ans+needModi << endl;
 }
 signed main() {
     ios::sync_with_stdio(false);
