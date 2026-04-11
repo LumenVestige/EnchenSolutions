@@ -29,7 +29,7 @@ void solve() {
         if (ansNums[i] - nums[i] > 0) {
             needModi += ansNums[i] - nums[i];
         }
-        if (canModi > 0 && needModi > 0 && ans+1 > afterMin[i]) {
+        if (canModi > 0 && needModi > 0 && ans+1 < afterMin[i+1]) {
             ans++;
             needModi--;
             canModi--;
