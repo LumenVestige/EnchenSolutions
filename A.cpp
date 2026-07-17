@@ -1,21 +1,28 @@
- #include<bits/stdc++.h>
+//
+// Created by sanenchen on 2026/07/13.
+//
+// 2328. Number of Increasing Paths in a Grid
+// https://leetcode.cn/problems/number-of-increasing-paths-in-a-grid/
+
+#include <bits/stdc++.h>
 using namespace std;
-using i64 = long long;
-#define debug(x) cerr << #x << ": " << x << "\n";
-void solve(){
-    int m, k;
-    cin >> m >> k;
-    if(m >= 7 && k == 3){
-        cout << "YES\n";
-    }
-    else{
-        cout << "NO\n";
-    }
+
+int countPaths(vector<vector<int>>& grid) {
+    // TODO
 }
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    int t = 1;
-    while(t--) solve();
+
+int main() {
+    // 改这个数字切换官方样例：1 .. 2
+    const int CASE = 1;
+
+    vector<vector<int>> grid;
+    if (CASE == 1) {
+        grid = {{1, 1}, {3, 4}};
+    }
+    else {
+        grid = {{1}, {2}};
+    }
+
+    cout << countPaths(grid) << endl;
     return 0;
 }
