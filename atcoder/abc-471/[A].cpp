@@ -1,23 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 #define int long long
 #define endl "\n"
 
 void solve() {
-    int a = 5;
-    cout << a << endl << &a << endl;
-    int b = 5;
-    cout << b << endl << &b << endl;
-    int *c = &b;
-    b = 6;
-    cout << c << endl << *c << endl;
+    
 }
 
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int T = 1;
-    // cin >> T;
+    cin >> T;
     while (T--) {
         solve();
     }
