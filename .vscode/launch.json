@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ LLDB Debug",
+            "type": "lldb", // 这里改为 lldb (需要安装 CodeLLDB 插件)
+            "request": "launch",
+            "program": "/Users/sanenchen/Desktop/run_temp/output",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "C/C++: g++ Build Active File",
+            "terminal": "integrated" // 使用集成终端
+        }
+    ]
+}
