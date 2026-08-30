@@ -3,5 +3,4 @@
 .claude/
 *asm.dSYM
 # ignore binary
-*
 !*.*
